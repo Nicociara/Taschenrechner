@@ -49,12 +49,13 @@
 $( ":button" ).on ("click",function (){
 
 var X =$(this).val ();
-
+if(X!="-"&&X!="X"&&X!=":"&&X!="+"){
+    $ ("input:text").val ($("input:text").val()+X);
+} 
 console.log (X);
 }); 
-if(x!="-"&&"X"&&":"&&"+"){
-    $("input:text").val (X);
-}
+ 
+
 
         </script>
     </body>
