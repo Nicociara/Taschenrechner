@@ -4,9 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Taschenrechner</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
     <body>
-        <input type="text">
+
+
+        <input type="text" id="textfeld">
         <input class="Number"
         type="button"
         value="1">
@@ -22,13 +25,13 @@
         value="5">  <input class="Number"
         type="button"
         value="6" 
+         class="Number"
+        type="button"
         value="7"> <input class="Number"
         type="button"
         value="8"> <input class="Number"
-        type="button"
-        value="9"> <input class="Number"
         type="button" 
-        value="+"> <input class="Number"
+        value="9"> <input class="Number"
         type="button"
         value="-">  <input class="Number"
         type="button"
@@ -36,9 +39,23 @@
         type="button"
         value="="> <input class="Number"
         type="button"
-        value=":">
+        value="+">
         <input class="Number" 
         type="button" 
         value="X">
+        <input class="Number" type="button" value="7">
+        
+        <script>
+$( ":button" ).on ("click",function (){
+
+var X =$(this).val ();
+
+console.log (X);
+}); 
+if(x!="-"&&"X"&&":"&&"+"){
+    $("input:text").val (X);
+}
+
+        </script>
     </body>
 </html>
