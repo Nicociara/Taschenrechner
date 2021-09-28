@@ -53,9 +53,10 @@ $( ":button" ).on ("click",function (){
 var X =$(this).val ();
 if(X!="-"&&X!="X"&&X!=":"&&X!="+"){
     $ ("input:text").val ($("input:text").val()+X);
-} else{ 
+} else if(X!="="){ 
 $("#geheim").val ($("input:text").val ());
 }
+
 console.log (X);
 }); 
  
