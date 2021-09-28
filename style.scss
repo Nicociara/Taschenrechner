@@ -1,0 +1,69 @@
+*{
+    font-size: 4vw;
+}
+
+body{height: calc(100vh - 2em);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr  ;
+   grid-template-areas: "text text text text" " sieben acht neun plus" "vier fünf sechs minus"  "eins zwei drei mal"   "zero gleich geteilt nix ";
+   margin: 1em auto;
+   width: 50%;
+   grid-gap: .25em;
+}
+
+#textfeld{
+    background-color: rgb(196, 192, 192);
+    grid-area: text ;
+    text-align: right;
+}
+#one{
+    grid-area: eins;
+}
+#two{
+    grid-area: zwei;
+}
+#three{
+    grid-area: drei;
+}
+#Mal{
+    grid-area: mal;
+}
+#four{
+    grid-area: vier;
+}
+#five{
+    grid-area: fünf;
+}
+#six{
+    grid-area: sechs;
+}
+#seven{
+    grid-area: sieben;
+}
+#eight{
+    grid-area: acht;
+}
+#nine{
+    grid-area: neun;
+}
+#Zerro{
+    grid-area: zero;
+}
+#gleich{
+    grid-area: gleich;
+}
+#Plus{
+    grid-area: plus;
+}
+#Minus{
+    grid-area: minus;
+}
+#geteilt{
+    grid-area: geteilt;
+}
+
+
+.operator{
+    background-color: slategrey;
+}

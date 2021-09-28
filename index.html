@@ -5,45 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Taschenrechner</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
+
     <body>
 
 
         <input type="text" id="textfeld" disabled>
-        <input class="Number"
+        <input class="Number" id="one"
         type="button"
         value="1">
-        <input class="Number"
+        <input class="Number" id="two"
         type="button"
         value="2">
-        <input class="Number" 
+        <input class="Number" id="three" 
         type="button" 
-        value="3">  <input class="Number"
+        value="3">  <input class="Number" id="four"
         type="button"
-        value="4">  <input class="Number"
+        value="4">  <input class="Number" id="five"
         type="button"
-        value="5">  <input class="Number"
+        value="5">  <input class="Number" id="six"
         type="button"
         value="6" 
          class="Number"
         type="button"
-        value="7"> <input class="Number"
+        value="7"> <input class="Number" id="eight"
         type="button"
-        value="8"> <input class="Number"
+        value="8"> <input class="Number" id="nine"
         type="button" 
-        value="9"> <input class="Number"
+        value="9"> <input class="Number" id="Minus"
         type="button"
-        value="-">  <input class="Number"
+        value="-">  <input class="Number" id="Zerro"
         type="button"
-        value="0"> <input class="Number"
+        value="0"> <input class="Number" id="gleich"
         type="button"
-        value="="> <input class="Number"
+        value="="> <input class="Number" id="Plus"
         type="button"
         value="+">
-        <input class="Number" 
+        <input class="Number" id="Mal" 
         type="button" 
         value="X">
-        <input class="Number" type="button" value="7">
+        <input id="seven" class="Number" type="button" value="7"> 
+        <input id="geteilt" class="Number" type="button" value=":"> 
 
         <input type="hidden"  id="geheim" name="versteckt" >
         
@@ -51,11 +54,18 @@
 $( ":button" ).on ("click",function (){
 
 var X =$(this).val ();
-if(X!="-"&&X!="X"&&X!="="&&X!="+"){
+if(X!="-"&&X!="X"&&X!="="&&X!="+"&&X!=":"){
     $ ("input:text").val ($("input:text").val()+X);
 } else if(X!="="){ 
 $("#geheim").val ($("input:text").val ());
- $("input:text.").val ("");
+ $("input:text").val ("");
+ $(this).addClass("operator");
+
+}else if(X=="="){var F=$(".operator").val();
+if(F=="-"){$("input:text").val(parseInt($("#geheim").val())- parseInt($("#textfeld").val()));}
+ else if(F=="+"){$("input:text").val (parseInt($("#geheim").val())+ parseInt($("#textfeld").val()));}
+else if(F=="X"){$("input:text").val (parseInt($("#geheim").val())* parseInt($("#textfeld").val()));}
+else if(F=="X"){$("input:text").val (parseInt($("#geheim").val())/ parseInt($("#textfeld").val()));}
 }
 
 console.log (X);
