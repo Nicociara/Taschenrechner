@@ -76,7 +76,14 @@ if(X!="-"&&X!="X"&&X!="="&&X!="+"&&X!=":"&&X!="√"&&X!="Ac"){
 }else if(X=="√"){
     var G= $("input:text").val();
     $("input:text").val(Math.sqrt(parseInt(G)));
-} 
+
+}else if(X=="Ac"){
+    $("input:button").removeClass("operator");
+    $("#textfeld").val("");
+    $("#geheim").val("");
+}
+
+
 
 console.log (X);
 }); 
