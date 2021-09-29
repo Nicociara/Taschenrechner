@@ -9,9 +9,9 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr .25fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr .25fr;
-      grid-template-areas: "text text text text" " sieben acht neun plus löschen" "vier fünf sechs minus"  "eins zwei drei mal"   "zero Wurzel geteilt gleich" " reset nix nix nix";
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr  .25fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr  .25fr;
+      grid-template-areas: "text text text text" " sieben acht neun plus " "vier fünf sechs minus"  "eins zwei drei mal"   "zero Wurzel geteilt gleich" " reset nix nix nix";
   margin: 1em auto;
   width: 50%;
   grid-gap: .25em;
