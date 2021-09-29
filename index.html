@@ -50,7 +50,7 @@
         <input id="wurzel" class="Number" type="button" value="√">
         <input id="reset" class="Number" type="button" value="Ac">
         <input id="hoch2" class="Number" type="button" value="X²">
-        
+
         <input type="hidden"  id="geheim" name="versteckt" >
         
     
@@ -59,9 +59,9 @@
 $( ":button" ).on ("click",function (){
 
 var X =$(this).val ();
-if(X!="-"&&X!="X"&&X!="="&&X!="+"&&X!=":"&&X!="√"&&X!="Ac"){
+if(X!="-"&&X!="X"&&X!="="&&X!="+"&&X!=":"&&X!="√"&&X!="Ac"&&X!="X²"){
     $ ("input:text").val ($("input:text").val()+X);
-} else if(X!="="&&X!="√"&&X!="Ac") { 
+} else if(X!="="&&X!="√"&&X!="Ac"&&X!="X²") { 
     $("#geheim").val ($("input:text").val ());
     $("input:text").val ("");
     $(this).addClass("operator");
@@ -86,7 +86,8 @@ if(X!="-"&&X!="X"&&X!="="&&X!="+"&&X!=":"&&X!="√"&&X!="Ac"){
     $("#textfeld").val("");
     $("#geheim").val("");
 }
-else if (x=="X²"){
+else if (X=="X²"){
+    $("#textfeld")
 
 
 }
