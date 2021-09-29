@@ -56,17 +56,26 @@ $( ":button" ).on ("click",function (){
 var X =$(this).val ();
 if(X!="-"&&X!="X"&&X!="="&&X!="+"&&X!=":"&&X!="√"){
     $ ("input:text").val ($("input:text").val()+X);
-} else if(X!="="){ 
-$("#geheim").val ($("input:text").val ());
- $("input:text").val ("");
- $(this).addClass("operator");
-
-}else if(X=="="){var F=$(".operator").val();
-if(F=="-"){$("input:text").val(parseInt($("#geheim").val())- parseInt($("#textfeld").val()));}
- else if(F=="+"){$("input:text").val (parseInt($("#geheim").val())+ parseInt($("#textfeld").val()));}
-else if(F=="X"){$("input:text").val (parseInt($("#geheim").val())* parseInt($("#textfeld").val()));}
-else if(F=="X"){$("input:text").val (parseInt($("#geheim").val())/ parseInt($("#textfeld").val()));}
-}
+} else if(X!="="&&X!="√") { 
+    $("#geheim").val ($("input:text").val ());
+    $("input:text").val ("");
+    $(this).addClass("operator");
+}else if(X=="="){
+    var F=$(".operator").val();
+    if(F=="-"){
+        $("input:text").val(parseInt($("#geheim").val())- parseInt($("#textfeld").val()));
+    }else if(F=="+"){
+        $("input:text").val (parseInt($("#geheim").val())+ parseInt($("#textfeld").val()));
+    }else if(F=="X"){
+        $("input:text").val (parseInt($("#geheim").val())* parseInt($("#textfeld").val()));
+    }else if(F=="X"){
+        $("input:text").val (parseInt($("#geheim").val())/ parseInt($("#textfeld").val()));
+    }
+    $("input:button").removeClass("operator");
+}else if(X=="√"){
+    var G= $("input:text").val();
+    $("input:text").val(Math.sqrt(parseInt(G)));
+} 
 
 console.log (X);
 }); 
