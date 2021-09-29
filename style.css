@@ -1,0 +1,122 @@
+@charset "UTF-8";
+* {
+  font-size: 4vw;
+}
+
+body {
+  height: calc(100vh - 2em);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "text text text text" " sieben acht neun plus" "vier fünf sechs minus"  "eins zwei drei mal"   "zero gleich geteilt nix ";
+  margin: 1em auto;
+  width: 50%;
+  grid-gap: .25em;
+}
+
+#textfeld {
+  background-color: #c4c0c0;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: text;
+  text-align: right;
+}
+
+#one {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: eins;
+}
+
+#two {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: zwei;
+}
+
+#three {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: drei;
+}
+
+#Mal {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: mal;
+}
+
+#four {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: vier;
+}
+
+#five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: fünf;
+}
+
+#six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: sechs;
+}
+
+#seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sieben;
+}
+
+#eight {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: acht;
+}
+
+#nine {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: neun;
+}
+
+#Zerro {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: zero;
+}
+
+#gleich {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: gleich;
+}
+
+#Plus {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: plus;
+}
+
+#Minus {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: minus;
+}
+
+#geteilt {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: geteilt;
+}
+
+.operator {
+  background-color: slategrey;
+}
+/*# sourceMappingURL=style.css.map */
