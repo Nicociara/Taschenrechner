@@ -57,7 +57,7 @@ $( ":button" ).on ("click",function (){
 var X =$(this).val ();
 if(X!="-"&&X!="X"&&X!="="&&X!="+"&&X!=":"&&X!="√"&&X!="Ac"){
     $ ("input:text").val ($("input:text").val()+X);
-} else if(X!="="&&X!="√") { 
+} else if(X!="="&&X!="√"&&X!="Ac") { 
     $("#geheim").val ($("input:text").val ());
     $("input:text").val ("");
     $(this).addClass("operator");
