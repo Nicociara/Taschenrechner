@@ -11,7 +11,7 @@ body {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr  .25fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr  .25fr;
-      grid-template-areas: "text text text text" " sieben acht neun plus " "vier fünf sechs minus"  "eins zwei drei mal"   "zero Wurzel geteilt gleich" " reset nix nix nix";
+      grid-template-areas: "text text text text" " sieben acht neun plus " "vier fünf sechs minus"  "eins zwei drei mal"   "zero Wurzel geteilt gleich" " reset hoch2 nix nix";
   margin: 1em auto;
   width: 50%;
   grid-gap: .25em;
@@ -124,6 +124,12 @@ body {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: reset;
+}
+
+#hoch2 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: hoch2;
 }
 
 .operator {
