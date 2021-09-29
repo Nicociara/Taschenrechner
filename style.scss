@@ -11,12 +11,17 @@ body{height: calc(100vh - 2em);
    margin: 1em auto;
    width: 50%;
    grid-gap: .25em;
+   
 }
 
 #textfeld{
     background-color: rgb(196, 192, 192);
     grid-area: text ;
     text-align: right;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px ;
 }
 #one{
     grid-area: eins;
