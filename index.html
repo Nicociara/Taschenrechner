@@ -48,6 +48,7 @@
         <input id="seven" class="Number" type="button" value="7"> 
         <input id="geteilt" class="Number" type="button" value=":"> 
         <input id="wurzel" class="Number" type="button" value="√">
+        <input id="Ac" class="Number" type="button" value="reset">
         <input type="hidden"  id="geheim" name="versteckt" >
         
         <script>
@@ -68,7 +69,7 @@ if(X!="-"&&X!="X"&&X!="="&&X!="+"&&X!=":"&&X!="√"){
         $("input:text").val (parseInt($("#geheim").val())+ parseInt($("#textfeld").val()));
     }else if(F=="X"){
         $("input:text").val (parseInt($("#geheim").val())* parseInt($("#textfeld").val()));
-    }else if(F=="X"){
+    }else if(F==":"){
         $("input:text").val (parseInt($("#geheim").val())/ parseInt($("#textfeld").val()));
     }
     $("input:button").removeClass("operator");
