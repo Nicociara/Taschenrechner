@@ -6,7 +6,7 @@ body{height: calc(100vh - 2em);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr  ;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr  ;
-   grid-template-areas: "text text text text" " sieben acht neun plus" "vier fünf sechs minus"  "eins zwei drei mal"   "zero gleich geteilt Wurzel";
+   grid-template-areas: "text text text text" " sieben acht neun plus" "vier fünf sechs minus"  "eins zwei drei mal"   "zero Wurzel geteilt gleich";
    margin: 1em auto;
    width: 50%;
    grid-gap: .25em;
